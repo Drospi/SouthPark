@@ -74,10 +74,10 @@ body{
     background:#7a4a2b;
     border-radius:50%;
     bottom:-25px;
-    left:10;
+    left:20px;
     top:350px;
     
-    box-shadow: 230px 0 0 #7a4a2b;
+    box-shadow: 210px 0 0 #7a4a2b;
 }
 .piernas{
     position:absolute;
