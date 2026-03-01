@@ -1,0 +1,71 @@
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    gap:40px;
+    background:#f0f0f0;
+}
+
+/* Base general */
+.torso{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ---------- CUERPOS ---------- */
+
+.stan{
+    width:105px;          
+    height:110px;
+    background-color:#5a3d2b;
+    border-radius:70% 70% 40% 40%;  
+}
+
+.kyle{
+    width:105px;
+    height:110px;
+    background-color:#f28c28;
+    border-radius:70% 70% 40% 40%;
+}
+
+.cartman{
+    width:160px;
+    height:135px;          
+    background-color:#c62828;
+    border-radius:50% 50% 40% 40%;
+}
+
+.brazo{
+    position:absolute;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    top:55%;
+    transform:translateY(-50%);
+}
+
+
+.izquierdo{
+    left:-18px;
+}
+
+.derecho{
+    right:-18px;
+}
+
+
+
+.stan .brazo{
+    background:#c62828;
+}
+
+.kyle .brazo{
+    background:#2e8b57;
+}
+
+.cartman .brazo{
+    background:#f4d03f;
+}
