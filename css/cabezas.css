@@ -1,20 +1,21 @@
 /* css/cabezas.css */
 .face {
-    background-color: #edc774; /* Color de piel */
-    border: 1px solid #000;
-    position: relative;
-    z-index: 10; /* Siempre arriba del cuerpo */
-    margin-bottom: -15px; /* Solape para que la cara tape el cuello */
+  background-color: #edc774; /* Color de piel */
+  border: 1px solid #000;
+  position: relative;
+  z-index: 10; /* Siempre arriba del cuerpo */
+  margin-bottom: -15px; /* Solape para que la cara tape el cuello */
 }
 
-.stan, .kyle {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+.stan,
+.kyle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 
 .cartman {
-    width: 250px;
-    height: 200px;
-    border-radius: 50%;
+  width: 250px;
+  height: 200px;
+  border-radius: 50%;
 }

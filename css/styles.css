@@ -11,8 +11,8 @@ body {
 
 .contenedor-principal {
     display: flex;
-    flex-direction: row; /* En fila */
-    align-items: flex-end; /* Todos al nivel del suelo */
+    flex-direction: row;
+    align-items: flex-end; 
     gap: 30px;
 }
 

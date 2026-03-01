@@ -1,10 +1,8 @@
-/* css/cuerpos.css */
 .torso {
   position: relative;
-  z-index: 1; 
+  z-index: 1;
 }
 
-/* Formas de abrigos */
 .stan-cuerpo {
   width: 205px;
   height: 150px;
@@ -24,7 +22,6 @@
   border-radius: 50% 50% 30% 30%;
 }
 
-/* Guantes */
 .brazo {
   position: absolute;
   width: 38px;
