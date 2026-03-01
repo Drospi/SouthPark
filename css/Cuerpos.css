@@ -1,0 +1,129 @@
+/* =========================================
+   CUERPOS, BRAZOS Y PIERNAS
+   Autor: Luis Rubén
+   ========================================= */
+
+/* El cuerpo está dentro de .face (HTML grupal) */
+.face {
+  position: relative;
+}
+
+/* ---------- CUERPOS ---------- */
+
+.face.stan {
+  width: 105px;
+  height: 110px;
+  background-color: #5a3d2b;
+  border-radius: 70% 70% 40% 40%;
+}
+
+.face.kyle {
+  width: 105px;
+  height: 110px;
+  background-color: #f28c28;
+  border-radius: 70% 70% 40% 40%;
+}
+
+.face.cartman {
+  width: 160px;
+  height: 135px;
+  background-color: #c62828;
+  border-radius: 50% 50% 40% 40%;
+}
+
+/* ---------- BRAZOS ---------- */
+
+.brazos {
+  position: absolute;
+  top: 55%;
+  width: 100%;
+}
+
+.brazos::before,
+.brazos::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.brazos::before {
+  left: -18px;
+}
+
+.brazos::after {
+  right: -18px;
+}
+
+/* Colores de brazos por personaje */
+.face.stan .brazos::before,
+.face.stan .brazos::after {
+  background: #c62828;
+}
+
+.face.kyle .brazos::before,
+.face.kyle .brazos::after {
+  background: #2e8b57;
+}
+
+.face.cartman .brazos::before,
+.face.cartman .brazos::after {
+  background: #f4d03f;
+}
+
+/* ---------- PIERNAS ---------- */
+
+.piernas {
+  position: absolute;
+  bottom: -12px;
+  width: 100%;
+}
+
+.piernas::before,
+.piernas::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 15px;
+  background: #2c3e50;
+}
+
+.piernas::before {
+  left: 32%;
+}
+
+.piernas::after {
+  right: 32%;
+}
+
+/* Zapatos */
+.piernas::before::after,
+.piernas::after::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: -5px;
+  width: 69px;
+  height: 10px;
+  background: black;
+  border-radius: 5px;
+}
+
+/* ---------- CARTMAN ESPECIAL ---------- */
+
+.face.cartman .piernas::before,
+.face.cartman .piernas::after {
+  width: 80px;
+  height: 18px;
+  bottom: -9px;
+  background: rgb(110, 46, 3);
+}
+
+.face.cartman .piernas::before {
+  left: 34%;
+}
+
+.face.cartman .piernas::after {
+  right: 34%;
+}
