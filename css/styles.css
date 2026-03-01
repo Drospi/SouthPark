@@ -1,12 +1,26 @@
 /* Andres*/
 body {
-  background: rgb(219, 207, 207);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    background: rgb(219, 207, 207);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
+.contenedor-principal {
+    display: flex;
+    flex-direction: row; /* En fila */
+    align-items: flex-end; /* Todos al nivel del suelo */
+    gap: 30px;
+}
+
+.personaje {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .kenny {
   position: relative;
   width: 300px;
@@ -107,18 +121,12 @@ body {
 }
 /*Andres*/
 
-body {
-  margin: 0;
-  height: 100vh;
-}
-
 /* CONTENEDOR DEL LETRERO */
 .letrero {
-  left: 40px;
-  bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-shrink: 0;
 }
 
 /* SEÑAL */
@@ -132,6 +140,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 /* IMAGEN */
@@ -148,4 +157,5 @@ body {
   border: 1px solid #000;
   background: #c86f22;
   margin-top: -5px;
+  flex-shrink: 0;
 }

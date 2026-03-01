@@ -1,7 +1,7 @@
 .mustache-scaler {
     position: absolute;
-    top: 35px;      
-    left: 50%;
+    top: 30px;      
+    left: 49%;
     transform: translateX(-50%) scale(0.2); 
     z-index: 100;    
     pointer-events: none;
