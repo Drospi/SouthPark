@@ -1,0 +1,39 @@
+:root {
+    --bg-red: #f5f2f2;
+    --face-skin: #edc774;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-red);
+}
+
+.contenedor-principal {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.face {
+    background-color: var(--face-skin);
+    border: 1px solid #000; 
+}
+
+
+.stan, .kyle, .kenny {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+
+.cartman {
+    width: 200px; 
+    height: 150px; 
+    border-radius: 50%; 
+}
