@@ -1,0 +1,40 @@
+:root {
+  --bg-red: #f5f2f2;
+  --face-skin: #edc774;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-red);
+}
+
+.contenedor-principal {
+  display: flex;
+  gap: 30px;
+  align-items: flex-end;
+}
+
+.face {
+  background-color: var(--face-skin);
+  border: 1px solid #000;
+  position: relative;
+}
+
+.stan,
+.kyle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 150px;
+}
+
+.cartman {
+  width: 250px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 150px;
+}
