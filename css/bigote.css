@@ -1,0 +1,63 @@
+.mustache-scaler {
+    position: absolute;
+    top: 35px;      
+    left: 50%;
+    transform: translateX(-50%) scale(0.2); 
+    z-index: 100;    
+    pointer-events: none;
+}
+
+.mustache {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    left: -215px;
+    top: -120px;
+    color: #000; 
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2));
+    border-radius: 50%;
+    box-shadow:
+        150px 240px 0 0 currentColor,
+        300px 240px 0 0 currentColor;
+}
+
+.mustache::before {
+    content: " ";
+    position: absolute;
+    left: 30px;
+    top: 120px;
+    width: 210px;
+    height: 120px;
+    border-bottom: solid 180px currentColor;
+    border-radius: 0 0 0 100%;
+    transform-origin: right 210px;
+    animation: bigoteIzq 1s ease-in-out infinite;
+}
+
+.mustache::after {
+    content: " ";
+    position: absolute;
+    left: 390px;
+    top: 120px;
+    width: 210px;
+    height: 120px;
+    border-bottom: solid 180px currentColor;
+    border-radius: 0 0 100% 0;
+    transform-origin: left 210px;
+    animation: bigoteDer 1s ease-in-out infinite;
+}
+
+@keyframes bigoteIzq {
+    0%, 100% { transform: rotate(-50deg); }
+    50%      { transform: rotate(-30deg); }
+}
+
+@keyframes bigoteDer {
+    0%, 100% { transform: rotate(50deg); }
+    50%      { transform: rotate(30deg); }
+}
+
+.kenny .mustache-scaler {
+    top: 10px; 
+    transform: translateX(-50%) scale(0.18); 
+}
