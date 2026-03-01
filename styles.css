@@ -38,15 +38,6 @@ body{
     border-radius:50% 50% 40% 40%;
 }
 
-.kenny{
-    width:105px;
-    height:110px;
-    background-color:#d2691e;
-    border-radius:70% 70% 40% 40%;
-}
-
-/* ---------- BRAZOS ---------- */
-
 .brazo{
     position:absolute;
     width:35px;
@@ -56,7 +47,7 @@ body{
     transform:translateY(-50%);
 }
 
-/* Posiciones */
+
 .izquierdo{
     left:-18px;
 }
@@ -65,7 +56,7 @@ body{
     right:-18px;
 }
 
-/* Colores tipo guantes estilo South Park */
+
 
 .stan .brazo{
     background:#c62828;
@@ -77,8 +68,4 @@ body{
 
 .cartman .brazo{
     background:#f4d03f;
-}
-
-.kenny .brazo{
-    background:#5a3d2b;
 }
