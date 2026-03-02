@@ -1,0 +1,77 @@
+/* =========================================
+   CUERPOS, BRAZOS Y PIERNAS
+   Adaptado para estructura: .face (cabeza) + .torso (cuerpo)
+   ========================================= */
+
+.torso {
+  position: relative;
+}
+
+/* ---------- CUERPOS ---------- */
+
+.stan-cuerpo {
+  width: 105px;
+  height: 110px;
+  background-color: #5a3d2b;
+  border-radius: 70% 70% 40% 40%;
+}
+
+.kyle-cuerpo {
+  width: 105px;
+  height: 110px;
+  background-color: #f28c28;
+  border-radius: 70% 70% 40% 40%;
+}
+
+.cartman-cuerpo {
+  width: 160px;
+  height: 135px;
+  background-color: #c62828;
+  border-radius: 50% 50% 40% 40%;
+}
+
+/* ---------- BRAZOS (dentro de .torso con ::before/::after) ---------- */
+
+.brazo {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  top: 55%;
+}
+
+.brazo.izquierdo { left: -18px; }
+.brazo.derecho   { right: -18px; }
+
+/* Colores de brazos por personaje */
+.stan-cuerpo    .brazo { background: #c62828; }
+.kyle-cuerpo    .brazo { background: #2e8b57; }
+.cartman-cuerpo .brazo { background: #f4d03f; }
+
+/* ---------- PIERNAS ---------- */
+
+/* Piernas como pseudo-elementos del torso */
+.stan-cuerpo::after,
+.kyle-cuerpo::after,
+.cartman-cuerpo::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* dos piernas con box-shadow */
+  width: 28px;
+  height: 15px;
+  background: #2c3e50;
+  border-radius: 4px;
+  box-shadow: 38px 0 0 #2c3e50;
+}
+
+/* Piernas de Cartman (más anchas y marrones) */
+.cartman-cuerpo::after {
+  width: 38px;
+  height: 18px;
+  background: rgb(110, 46, 3);
+  box-shadow: 50px 0 0 rgb(110, 46, 3);
+  bottom: -16px;
+}
