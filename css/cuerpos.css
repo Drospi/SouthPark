@@ -1,7 +1,13 @@
+/* =========================================
+   CUERPOS, BRAZOS Y PIERNAS
+   ========================================= */
+
 .torso {
   position: relative;
   z-index: 1;
 }
+
+/* ---------- CUERPOS ---------- */
 
 .stan-cuerpo {
   width: 205px;
@@ -22,6 +28,8 @@
   border-radius: 50% 50% 30% 30%;
 }
 
+/* ---------- BRAZOS ---------- */
+
 .brazo {
   position: absolute;
   width: 38px;
@@ -29,19 +37,38 @@
   border-radius: 50%;
   top: 60%;
 }
-.izquierdo {
-  left: -15px;
-}
-.derecho {
-  right: -15px;
+.brazo.izquierdo { left: -15px; }
+.brazo.derecho   { right: -15px; }
+
+.stan-cuerpo    .brazo { background: #c62828; }
+.kyle-cuerpo    .brazo { background: #2e8b57; }
+.cartman-cuerpo .brazo { background: #f4d03f; }
+
+/* ---------- PIERNAS ---------- */
+
+.stan-cuerpo::after,
+.kyle-cuerpo::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 40%;
+  transform: translateX(-50%);
+  width: 38px;
+  height: 15px;
+  background: #2c3e50;
+  border-radius: 4px;
+  box-shadow: 55px 0 0 #2c3e50;
 }
 
-.stan-cuerpo .brazo {
-  background: #c62828;
-}
-.kyle-cuerpo .brazo {
-  background: #2e8b57;
-}
-.cartman-cuerpo .brazo {
-  background: #f4d03f;
+.cartman-cuerpo::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 40%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 18px;
+  background: rgb(110, 46, 3);
+  border-radius: 4px;
+  box-shadow: 68px 0 0 rgb(110, 46, 3);
 }

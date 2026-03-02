@@ -1,19 +1,19 @@
 /* Andres*/
 body {
-    background: rgb(219, 207, 207);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  background: rgb(219, 207, 207);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .contenedor-principal {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end; 
-    gap: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 30px;
 }
 
 .personaje {
