@@ -13,18 +13,28 @@
   width: 205px;
   height: 150px;
   background-color: #5a3d2b;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 2px;
   border-radius: 60% 60% 20% 20% / 100% 100% 20% 20%;
 }
 .kyle-cuerpo {
   width: 205px;
   height: 150px;
   background-color: #f28c28;
+  
+  border-style: solid;
+  border-color: #000000;
+  border-width: 2px;
   border-radius: 60% 60% 20% 20% / 100% 100% 20% 20%;
 }
 .cartman-cuerpo {
   width: 260px;
   height: 150px;
   background-color: #c62828;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 2px;
   border-radius: 50% 50% 30% 30%;
 }
 
