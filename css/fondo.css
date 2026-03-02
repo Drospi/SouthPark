@@ -17,7 +17,6 @@
             background-color: var(--mountain-green);
             height: 100vh;
             display: flex;
-            align-items: flex-end;
         }
 
         .south-park-bg {
@@ -58,7 +57,7 @@
         /* Contenedor de árboles */
         .trees {
             position: absolute;
-            bottom: 32%;
+            bottom: 40%;
             width: 100%;
             height: 220px;
             display: flex;
