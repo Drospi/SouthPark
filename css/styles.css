@@ -14,16 +14,18 @@ body {
   flex-direction: row;
   align-items: center;
   gap: 30px;
-  position: relative;
-  top: 200px;
-  z-index: 10;
+    /* position: relative;
+    top: 200px;
+    z-index: 10; */
 }
 
 .personaje {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
+
 .kenny {
   position: relative;
   width: 300px;
@@ -125,40 +127,43 @@ body {
 /*Andres*/
 
 /* CONTENEDOR DEL LETRERO */
+/* CONTENEDOR DEL LETRERO */
 .letrero {
+  position: absolute; 
+  bottom: 200px;      
+  left: 8%;
+  transform: translateX(-50%); 
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-shrink: 0;
+  z-index: 10;       
 }
 
 /* SEÑAL */
 .senal {
-  width: 110px;
-  height: 110px;
+  width: 150px;
+  height: 150px;
   background: hsl(50, 100%, 54%);
-  border: 2px solid #000;
-  border-radius: 6px;
-  transform: rotate(45deg);
+  border: 3px solid #000;
+  border-radius: 4px;
+  transform: rotate(45deg); 
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
+  margin-bottom: 25px; 
 }
 
-/* IMAGEN */
 .senal img {
-  width: 70%;
+  width: 75%;
   height: auto;
-  transform: rotate(-90deg);
+  transform: rotate(-90deg); 
 }
 
 /* POSTE */
 .poste {
-  width: 7px;
-  height: 200px;
-  border: 1px solid #000;
+  width: 8px;
+  height: 350px; 
+  border: 2px solid #000;
   background: #c86f22;
-  margin-top: -5px;
-  flex-shrink: 0;
+  margin-top: -10px; 
 }
