@@ -1,0 +1,87 @@
+/* --- ESTILOS GENERALES PARA LOS GORROS --- */
+.gorro-stan, .gorro-kyle, .gorro-cartman {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20; /* Por encima de la cara y el bigote */
+    pointer-events: none;
+}
+
+/* --- GORRO DE STAN (Azul y Rojo) --- */
+.gorro-stan {
+    width: 140px;
+    height: 70px;
+    background: #3b82f6;
+    border: 3px solid #000;
+    border-radius: 70px 70px 5px 5px;
+    top: -20px; /* Ajusta según la altura de tu .face */
+}
+
+.gorro-stan::before { /* Franja Roja */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background: #ef4444;
+    border-top: 3px solid #000;
+}
+
+.gorro-stan::after { /* Pompón */
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background: #ef4444;
+    border: 3px solid #000;
+    border-radius: 50%;
+}
+
+/* --- GORRO DE KYLE (Verde con Orejeras) --- */
+.gorro-kyle {
+    width: 145px;
+    height: 80px;
+    background: #22c55e;
+    border: 3px solid #000;
+    border-radius: 15px 15px 5px 5px;
+    top: -25px;
+}
+
+.gorro-kyle::before { /* Orejeras y solapa frontal */
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: -15px;
+    /* Usamos sombreados para simular las orejeras laterales */
+    box-shadow: 
+        inset 0 15px 0 #16a34a, /* Parte interna de la solapa */
+        -10px 10px 0 0 #22c55e, /* Orejera Izq */
+        10px 10px 0 0 #22c55e;  /* Orejera Der */
+}
+
+/* --- GORRO DE CARTMAN (Turquesa y Amarillo) --- */
+.gorro-cartman {
+    width: 160px; /* Cartman suele ser más ancho */
+    height: 75px;
+    background: #06b6d4;
+    border: 3px solid #000;
+    border-radius: 80px 80px 10px 10px;
+    top: -22px;
+}
+
+.gorro-cartman::after { /* Pompón Amarillo */
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 35px;
+    background: #facc15;
+    border: 3px solid #000;
+    border-radius: 50%;
+}
