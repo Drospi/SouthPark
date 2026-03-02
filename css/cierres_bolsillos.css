@@ -1,6 +1,3 @@
-/* =======================================================
-   STAN — cierre + 3 botones a la izquierda
-======================================================= */
 
 .cierre-stan {
   position: absolute;
@@ -12,7 +9,6 @@
   background: #000;
   z-index: 5;
 }
-
 .botones-stan-izq {
   position: absolute;
   top: 22%;
@@ -29,11 +25,6 @@
   background: #000;
   border-radius: 50%;
 }
-
-
-/* =======================================================
-   KYLE — reutiliza cierre + 3 botones a la izquierda de Stan
-======================================================= */
 
 .cierre-kyle {
   position: absolute;
@@ -56,10 +47,7 @@
   z-index: 6;
 }
 
-/* La clase .punto ya existe y se reutiliza automáticamente para los 3 botones */
-/* =======================================================
-   CARTMAN — igual que Stan
-======================================================= */
+
 
 .cierre-cartman {
   position: absolute;
@@ -83,9 +71,6 @@
 }
 
 
-/* =======================================================
-   KENNY — cierre vertical simple
-======================================================= */
 
 .cierre-kenny {
   position: absolute;
