@@ -1,0 +1,181 @@
+:root {
+            --sky-blue: #87CEEB;
+            --mountain-green: #2D5A27;
+            --snow-white: #FFFFFF;
+            --peak-white: #F0F0F0;
+            --tree-green: #1a6b2a;
+            --tree-dark: #145220;
+            --snow-layer: rgba(255,255,255,0.92);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: var(--mountain-green);
+            height: 100vh;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .south-park-bg {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: var(--mountain-green);
+        }
+
+        /* Cielo */
+        .sky {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 30%;
+            background-color: var(--sky-blue);
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+        }
+
+        .sky::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 45%;
+            width: 10%;
+            height: 40%;
+            background: var(--peak-white);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        /* Suelo de nieve */
+        .snow-ground {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40%;
+            background: var(--snow-white);
+            border-radius: 50% 50% 0 0 / 20% 20% 0 0;
+            z-index: 2;
+        }
+
+        /* Contenedor de árboles */
+        .trees {
+            position: absolute;
+            bottom: 32%;
+            width: 100%;
+            height: 220px;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            z-index: 3;
+            padding: 0 40px;
+        }
+
+        /* ====== ÁRBOL DE NAVIDAD ====== */
+        .xmas-tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            transform-origin: bottom center;
+        }
+
+        /* Capas del árbol */
+        .layer {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Triángulo verde */
+        .layer .green {
+            background: var(--tree-green);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        /* Nieve encima de cada capa */
+        .layer .snow-cap {
+            position: absolute;
+            top: 0;
+            background: var(--snow-layer);
+            clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+            pointer-events: none;
+        }
+
+        /* Tronco */
+        .trunk {
+            background: #5C3A1E;
+            border-radius: 2px;
+        }
+
+        /* Estrella */
+        .star {
+            color: #FFD700;
+            font-size: 14px;
+            line-height: 1;
+            margin-bottom: 2px;
+            filter: drop-shadow(0 0 4px #FFD700);
+            animation: twinkle 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes twinkle {
+            from { opacity: 1; filter: drop-shadow(0 0 4px #FFD700); }
+            to   { opacity: 0.6; filter: drop-shadow(0 0 10px #FFA500); }
+        }
+
+        /* ---- Tamaños de árboles ---- */
+
+        /* Árbol pequeño */
+        .tree-sm .layer-1 .green   { width: 50px; height: 35px; }
+        .tree-sm .layer-1 .snow-cap{ width: 50px; height: 16px; }
+        .tree-sm .layer-2 .green   { width: 70px; height: 42px; margin-top: -14px; }
+        .tree-sm .layer-2 .snow-cap{ width: 70px; height: 18px; }
+        .tree-sm .layer-3 .green   { width: 90px; height: 50px; margin-top: -16px; }
+        .tree-sm .layer-3 .snow-cap{ width: 90px; height: 20px; }
+        .tree-sm .trunk            { width: 12px; height: 20px; }
+        .tree-sm .star             { font-size: 12px; }
+
+        /* Árbol mediano */
+        .tree-md .layer-1 .green   { width: 70px; height: 50px; }
+        .tree-md .layer-1 .snow-cap{ width: 70px; height: 22px; }
+        .tree-md .layer-2 .green   { width: 100px; height: 60px; margin-top: -20px; }
+        .tree-md .layer-2 .snow-cap{ width: 100px; height: 26px; }
+        .tree-md .layer-3 .green   { width: 130px; height: 72px; margin-top: -24px; }
+        .tree-md .layer-3 .snow-cap{ width: 130px; height: 30px; }
+        .tree-md .trunk            { width: 16px; height: 28px; }
+
+        /* Árbol grande */
+        .tree-lg .layer-1 .green   { width: 90px; height: 65px; }
+        .tree-lg .layer-1 .snow-cap{ width: 90px; height: 28px; }
+        .tree-lg .layer-2 .green   { width: 130px; height: 78px; margin-top: -26px; }
+        .tree-lg .layer-2 .snow-cap{ width: 130px; height: 34px; }
+        .tree-lg .layer-3 .green   { width: 170px; height: 95px; margin-top: -32px; }
+        .tree-lg .layer-3 .snow-cap{ width: 170px; height: 40px; }
+        .tree-lg .trunk            { width: 20px; height: 35px; }
+        .tree-lg .star             { font-size: 18px; }
+
+        /* Animación de copos de nieve */
+        .snowflakes {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: white;
+            font-size: 1em;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(110vh) rotate(360deg); opacity: 0.2; }
+        }

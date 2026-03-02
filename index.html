@@ -1,13 +1,122 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>South Park</title>
+    <style>
+        :root {
+            --sky-blue: #87CEEB;
+            --mountain-green: #2D5A27;
+            --snow-white: #FFFFFF;
+            --peak-white: #F0F0F0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: var(--mountain-green); /* Color base del fondo */
+            height: 100vh;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        /* Contenedor principal */
+        .south-park-bg {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: var(--mountain-green);
+        }
+
+        /* El cielo en el centro (triángulo invertido) */
+        .sky {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 30%;
+            background-color: var(--sky-blue);
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+        }
+
+        /* Nieve en la cima */
+        .sky::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 45%;
+            width: 10%;
+            height: 40%;
+            background: var(--peak-white);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        /* Las montañas laterales */
+        .mountains {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* El suelo de nieve */
+        .snow-ground {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40%;
+            background: var(--snow-white);
+            border-radius: 50% 50% 0 0 / 20% 20% 0 0; /* Curva suave de la colina */
+            z-index: 2;
+        }
+
+        /* Los Pinos (usando un gradiente repetitivo o formas individuales) */
+        .trees {
+            position: absolute;
+            bottom: 35%;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: space-around;
+            z-index: 1;
+        }
+
+        .tree {
+            width: 60px;
+            height: 100px;
+            background: var(--mountain-green);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            position: relative;
+        }
+
+        /* Nieve en los pinos */
+        .tree::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            width: 80%;
+            height: 30%;
+            background: white;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+    </style>
 </head>
 <body>
-    
 
+    <div class="south-park-bg">
+        <div class="sky"></div>
+        
+        <div class="trees">
+            <div class="tree" style="transform: scale(1.5); bottom: -20px;"></div>
+            <div class="tree" style="transform: scale(1.2); left: -50px;"></div>
+            <div class="tree" style="transform: scale(1.8); right: -30px;"></div>
+            <div class="tree" style="transform: scale(1.3);"></div>
+        </div>
+
+        <div class="snow-ground"></div>
+    </div>
 
 </body>
 </html>
