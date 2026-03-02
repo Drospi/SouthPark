@@ -1,3 +1,6 @@
+/* =======================================================
+   STAN — cierre + 3 botones a la izquierda
+======================================================= */
 
 .cierre-stan {
   position: absolute;
@@ -9,13 +12,14 @@
   background: #000;
   z-index: 5;
 }
+
 .botones-stan-izq {
   position: absolute;
-  top: 22%;
-  left: 38%;
+  top: 25%;
+  left: 40%;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
   z-index: 6;
 }
 
@@ -26,28 +30,65 @@
   border-radius: 50%;
 }
 
+
+/* =======================================================
+   KYLE — cierre + bolsillos de pecho con V
+======================================================= */
+
 .cierre-kyle {
   position: absolute;
-  top: 15%;                /* igual que Stan */
+  top: 12%;
   left: 50%;
   transform: translateX(-50%);
-  width: 3px;              /* igual que Stan */
-  height: 65%;             /* igual que Stan */
+  width: 4px;
+  height: 70%;
   background: #000;
   z-index: 5;
 }
 
-.botones-kyle-izq {
+/* Bolsillo base */
+.bolsillo-kyle {
   position: absolute;
-  top: 22%;                /* igual que Stan */
-  left: 38%;               /* igual que Stan */
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+  top: 30%;                 /* altura del pecho */
+  width: 48px;
+  height: 55px;
+  border: 4px solid #5a3a1a;
+  border-radius: 3px;
+  background: transparent;
   z-index: 6;
 }
 
+/* Posición izquierda */
+.bolsillo-kyle.izq {
+  left: 28%;
+}
 
+/* Posición derecha */
+.bolsillo-kyle.der {
+  right: 28%;
+}
+
+/* Parte superior en forma de V */
+.bolsillo-kyle::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 18px;
+
+  border-left: 4px solid #5a3a1a;
+  border-right: 4px solid #5a3a1a;
+  border-bottom: 4px solid #5a3a1a;
+
+  background: transparent;
+}
+
+
+/* =======================================================
+   CARTMAN — igual que Stan
+======================================================= */
 
 .cierre-cartman {
   position: absolute;
@@ -66,11 +107,14 @@
   left: 40%;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
   z-index: 6;
 }
 
 
+/* =======================================================
+   KENNY — cierre vertical simple
+======================================================= */
 
 .cierre-kenny {
   position: absolute;
