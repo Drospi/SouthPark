@@ -1,0 +1,99 @@
+/* =======================================================
+   STAN — cierre + 3 botones a la izquierda
+======================================================= */
+
+.cierre-stan {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 65%;
+  background: #000;
+  z-index: 5;
+}
+
+.botones-stan-izq {
+  position: absolute;
+  top: 22%;
+  left: 38%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 6;
+}
+
+.punto {
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border-radius: 50%;
+}
+
+
+/* =======================================================
+   KYLE — reutiliza cierre + 3 botones a la izquierda de Stan
+======================================================= */
+
+.cierre-kyle {
+  position: absolute;
+  top: 15%;                /* igual que Stan */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;              /* igual que Stan */
+  height: 65%;             /* igual que Stan */
+  background: #000;
+  z-index: 5;
+}
+
+.botones-kyle-izq {
+  position: absolute;
+  top: 22%;                /* igual que Stan */
+  left: 38%;               /* igual que Stan */
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 6;
+}
+
+/* La clase .punto ya existe y se reutiliza automáticamente para los 3 botones */
+/* =======================================================
+   CARTMAN — igual que Stan
+======================================================= */
+
+.cierre-cartman {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 65%;
+  background: #000;
+  z-index: 5;
+}
+
+.botones-cartman-izq {
+  position: absolute;
+  top: 22%;
+  left: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 6;
+}
+
+
+/* =======================================================
+   KENNY — cierre vertical simple
+======================================================= */
+
+.cierre-kenny {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 65%;
+  background: #000;
+  z-index: 5;
+}
