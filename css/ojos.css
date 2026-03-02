@@ -1,0 +1,83 @@
+.ojo {
+  position: absolute;
+  width: 82px;
+  height: 95px;
+  background: white;
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+  border: 2px solid #000;
+  z-index: 10;
+  animation: blink 4s infinite;
+}
+
+.ojo::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 8px;
+  background: black;
+  border-radius: 50%;
+  bottom: 35%;
+}
+
+.ojo.izquierdo {
+  --rot: 8deg;
+  transform: rotate(var(--rot));
+  left: 15px;
+}
+
+.ojo.derecho {
+  --rot: -8deg;
+  transform: rotate(var(--rot));
+  z-index: 11;
+}
+
+.ojo.izquierdo::after {
+  right: 20%;
+}
+.ojo.derecho::after {
+  left: 20%;
+}
+
+.stan .ojo.izquierdo,
+.kyle .ojo.izquierdo {
+  left: 20px;
+  top: 40px;
+}
+.stan .ojo.derecho,
+.kyle .ojo.derecho {
+  left: 98px;
+  top: 40px;
+}
+
+.cartman .ojo {
+  width: 75px;
+  height: 88px;
+  top: 50px;
+}
+.cartman .ojo.izquierdo {
+  left: 48px;
+}
+.cartman .ojo.derecho {
+  left: 122px;
+}
+
+.cara-piel .ojo.izquierdo {
+  --rot: 10deg;
+  left: -25px;
+}
+.cara-piel .ojo.derecho {
+  --rot: -10deg;
+  right: -28px;
+  left: auto;
+}
+
+@keyframes blink {
+  0%,
+  90%,
+  100% {
+    transform: rotate(var(--rot)) scaleY(1);
+  }
+  95% {
+    transform: rotate(var(--rot)) scaleY(0.1);
+  }
+}

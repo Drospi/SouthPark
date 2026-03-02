@@ -1,0 +1,47 @@
+.torso {
+  position: relative;
+  z-index: 1;
+}
+
+.stan-cuerpo {
+  width: 205px;
+  height: 150px;
+  background-color: #5a3d2b;
+  border-radius: 60% 60% 20% 20% / 100% 100% 20% 20%;
+}
+.kyle-cuerpo {
+  width: 205px;
+  height: 150px;
+  background-color: #f28c28;
+  border-radius: 60% 60% 20% 20% / 100% 100% 20% 20%;
+}
+.cartman-cuerpo {
+  width: 260px;
+  height: 150px;
+  background-color: #c62828;
+  border-radius: 50% 50% 30% 30%;
+}
+
+.brazo {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  top: 60%;
+}
+.izquierdo {
+  left: -15px;
+}
+.derecho {
+  right: -15px;
+}
+
+.stan-cuerpo .brazo {
+  background: #c62828;
+}
+.kyle-cuerpo .brazo {
+  background: #2e8b57;
+}
+.cartman-cuerpo .brazo {
+  background: #f4d03f;
+}
